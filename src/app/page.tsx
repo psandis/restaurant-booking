@@ -290,7 +290,7 @@ type DetailsFormProps = {
   isLoading: boolean;
   timeOptions: string[];
   onBack: () => void;
-  dateInputRef: React.RefObject<HTMLInputElement>;
+  dateInputRef: React.RefObject<HTMLInputElement | null>;
 };
 
 const DetailsForm = ({
@@ -341,27 +341,7 @@ const DetailsForm = ({
       <label className="space-y-2 text-sm text-slate-300">
         Date
         <div className="relative">
-          <CalendarIcon className="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-amber-300" />
-          <div
-            role="button"
-            tabIndex={0}
-            onClick={() => dateInputRef.current?.showPicker?.()}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                dateInputRef.current?.showPicker?.();
-              }
-            }}
-            className="flex w-full items-center rounded-xl border border-white/10 bg-slate-900/40 py-2 pl-10 pr-3 text-left text-white transition focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/40"
-          >
-            <span className="flex-1 text-sm text-slate-100">
-              {new Date(details.date).toLocaleDateString(undefined, {
-                weekday: "short",
-                month: "short",
-                day: "numeric",
-              })}
-            </span>
-          </div>
+          <CalendarIcon className="pointer-events-none absolute left-3 top-1/2 z-10 h-5 w-5 -translate-y-1/2 text-amber-300" />
           <input
             ref={dateInputRef}
             type="date"
@@ -369,7 +349,7 @@ const DetailsForm = ({
             value={details.date}
             min={new Date().toISOString().split("T")[0]}
             onChange={onDetailsChange}
-            className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+            className="w-full rounded-xl border border-white/10 bg-slate-900/40 py-2 pl-10 pr-3 text-white outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-300/40 [color-scheme:dark] [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:cursor-pointer"
           />
         </div>
       </label>
