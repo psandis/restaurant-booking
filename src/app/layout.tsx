@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://psandis.github.io/restaurant-booking"),
   title: "Ember & Ash | Restaurant Booking",
   description:
-    "An elegant, mobile-first booking ritual for Ember & Ash — choose your setting, preview availability, and confirm in under a minute.",
+    "An elegant, mobile-first booking ritual for Ember & Ash - choose your setting, preview availability, and confirm in under a minute.",
   openGraph: {
     title: "Ember & Ash | Restaurant Booking",
     description:

@@ -1,4 +1,4 @@
-# Ember & Ash — Restaurant Booking
+# Ember & Ash - Restaurant Booking
 
 A multi-step restaurant table booking app with experience selection, availability lookup, and booking confirmation. Dark UI with amber accents and frosted glass effects.
 
@@ -8,11 +8,11 @@ A multi-step restaurant table booking app with experience selection, availabilit
 
 ## Features
 
-- **Experience Selection** — Choose from four dining settings: The Hearth, The Chef's Table, The Courtyard, and The Private Cellar
-- **Smart Availability** — Find available time slots based on party size, date, and preferred time
-- **Multi-Step Booking Flow** — Guided wizard from experience selection through to confirmation
-- **Guest Controls** — Stepper input for party size (1–20 guests)
-- **Dark Theme** — Slate/amber palette with backdrop blur and frosted glass cards
+- **Experience Selection** - Choose from four dining settings: The Hearth, The Chef's Table, The Courtyard, and The Private Cellar
+- **Smart Availability** - Find available time slots based on party size, date, and preferred time
+- **Multi-Step Booking Flow** - Guided wizard from experience selection through to confirmation
+- **Guest Controls** - Stepper input for party size (1-20 guests)
+- **Dark Theme** - Slate/amber palette with backdrop blur and frosted glass cards
 
 ## Booking Flow
 
