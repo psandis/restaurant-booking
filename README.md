@@ -2,6 +2,8 @@
 
 A multi-step restaurant table booking app with experience selection, availability lookup, and booking confirmation. Dark UI with amber accents and frosted glass effects.
 
+**[Live Demo](https://psandis.github.io/restaurant-booking/)**
+
 ![Ember & Ash](restaurant_view.png)
 
 ## Features
@@ -55,14 +57,16 @@ booking-restaurant/
 | Utilities | clsx | 2.1.1 |
 | Icons | lucide-react | 0.553.0 |
 
-## Getting Started
+## Quick Start
 
 ```bash
+git clone https://github.com/psandis/restaurant-booking.git
+cd restaurant-booking
 npm install
 npm run dev
 ```
 
-Opens at `http://localhost:3021`
+Open http://localhost:3021.
 
 ## Build
 
