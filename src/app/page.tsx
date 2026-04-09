@@ -11,30 +11,32 @@ import {
 import { findAvailableTimes } from "@/services/geminiService";
 import { BookingStep, type BookingDetails, type UserDetails } from "@/types/booking";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const experiences = [
   {
     name: "The Hearth",
     description:
       "The vibrant heart of our restaurant, centered around the wood-fired grill. Perfect for an energetic dining experience.",
-    image: "/images/tables/hearth.jpg",
+    image: `${basePath}/images/tables/hearth.jpg`,
   },
   {
     name: "The Chef's Table",
     description:
       "An intimate counter seating with a direct view of the kitchen. A culinary journey for the adventurous.",
-    image: "/images/tables/chefs-table.jpg",
+    image: `${basePath}/images/tables/chefs-table.jpg`,
   },
   {
     name: "The Courtyard",
     description:
       "A serene, open-air space for a relaxed meal under the stars. Perfect for groups and special occasions.",
-    image: "/images/tables/courtyard.jpg",
+    image: `${basePath}/images/tables/courtyard.jpg`,
   },
   {
     name: "The Private Cellar",
     description:
       "An exclusive setting for private gatherings, surrounded by our curated wine collection. Ideal for celebrations.",
-    image: "/images/tables/private-cellar.jpg",
+    image: `${basePath}/images/tables/private-cellar.jpg`,
   },
 ];
 
@@ -145,7 +147,7 @@ export default function Home() {
         className="absolute inset-0 -z-20 bg-cover bg-center opacity-15"
         style={{
           backgroundImage:
-            "url(/images/tables/hero.jpg)",
+            `url(${basePath}/images/tables/hero.jpg)`,
         }}
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
